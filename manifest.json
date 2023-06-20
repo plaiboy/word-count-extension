@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "word-count Extension",
+    "version": "1.0",
+    "description": "A Chrome extension for counting words on web pages",
+
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "30": "icon30.png",
+        "18": "icon18.png"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "18": "icon18.png",
+      "30": "icon30.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "*://*.example.org/"
+      ],
+      "permissions": [
+        "storage"
+      ],
+    "web_accessible_resources": [
+      {
+        "resources": ["content.js"],
+        "matches": ["*://*/*"]
+      }
+    ]
+  }
+  
